@@ -1,0 +1,47 @@
+project:
+  name: racm-forecast
+  seed: 42
+
+data:
+  market_data_path: data/raw/market/
+  news_data_path: data/raw/news/
+  fundamental_data_path: data/raw/fundamentals/
+  macro_data_path: data/raw/macro/
+  processed_path: data/processed/
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  sequence_length: 60
+  forecast_horizon: 5
+
+preprocessing:
+  technical_indicators:
+    - rsi
+    - macd
+    - bollinger_bands
+    - atr
+    - obv
+  normalization: standard  # standard or minmax
+  fill_method: ffill
+
+model:
+  d_model: 128
+  n_heads: 8
+  n_layers: 4
+  dropout: 0.1
+  num_regimes: 4
+  num_experts: 4
+
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  epochs: 100
+  early_stopping_patience: 10
+  loss_weights:
+    return: 1.0
+    direction: 0.5
+    volatility: 0.5
+
+uncertainty:
+  alpha: 0.1  # 90% coverage
+  method: split_conformal

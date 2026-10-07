@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Data (keep structure, ignore actual data files)
+data/raw/**/*.csv
+data/raw/**/*.json
+data/processed/**/*.csv
+data/processed/**/*.pkl
+data/processed/**/*.pt
+!data/**/.gitkeep
+
+# PyTorch
+*.pth
+*.pt
+checkpoints/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Pytest
+.pytest_cache/
+
+# Secrets
+.env
+*.key
