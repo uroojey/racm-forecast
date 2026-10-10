@@ -15,7 +15,7 @@ A modular end-to-end financial forecasting framework that combines multi-modal d
 | 1 | Multi-Modal Data Preprocessing | ✅ Done |
 | 2 | Risk-Adaptive Temporal Encoder | ✅ Done |
 | 3 | LLM-based Event Extraction | ✅ Done |
-| 4 | Dynamic Financial Knowledge Graph | 🔲 Pending |
+| 4 | Dynamic Financial Knowledge Graph | ✅ Done |
 | 5 | Causal Graph Learning | 🔲 Pending |
 | 6 | Causal Temporal Graph Transformer (RACM-GT) | 🔲 Pending |
 | 7 | Market Regime Discovery | 🔲 Pending |
