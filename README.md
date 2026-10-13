@@ -20,8 +20,8 @@ A modular end-to-end financial forecasting framework that combines multi-modal d
 | 6 | Causal Temporal Graph Transformer (RACM-GT) | ✅ Done |
 | 7 | Market Regime Discovery | ✅ Done |
 | 8 | Regime-Conditioned Mixture-of-Experts | ✅ Done |
-| 9 | Prediction Heads | 🔲 Pending |
-| 10 | Uncertainty Quantification | 🔲 Pending |
+| 9 | Prediction Heads | ✅ Done |
+| 10 | Uncertainty Quantification | ✅ Done |
 | 11 | Explainability and Risk Analysis | 🔲 Pending |
 
 ## Project Structure
