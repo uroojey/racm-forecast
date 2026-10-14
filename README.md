@@ -22,7 +22,7 @@ A modular end-to-end financial forecasting framework that combines multi-modal d
 | 8 | Regime-Conditioned Mixture-of-Experts | ✅ Done |
 | 9 | Prediction Heads | ✅ Done |
 | 10 | Uncertainty Quantification | ✅ Done |
-| 11 | Explainability and Risk Analysis | 🔲 Pending |
+| 11 | Explainability and Risk Analysis | ✅ Done |
 
 ## Project Structure
 
