@@ -6,6 +6,60 @@ A modular end-to-end financial forecasting framework that combines multi-modal d
 
 ## Architecture
 
+```mermaid
+flowchart TD
+    subgraph Data["1. Multi-Modal Ingestion (Module 1)"]
+        MKT["Market OHLCV Data"]
+        NEWS["Financial News Texts"]
+        FUND["Fundamental Ratios"]
+        MACRO["Macro Indicators"]
+    end
+
+    subgraph Encoders["2. Multi-Modal Encoders (Modules 2 & 3)"]
+        TE["Risk-Adaptive Temporal Encoder<br/>(Transformer / TCN)"]
+        EE["LLM Event Extractor<br/>(OpenAI / Llama + NER)"]
+        FE["Fundamental TabTransformer"]
+        ME["Macro Temporal Encoder"]
+    end
+
+    subgraph Graph["3. Graph & Causal Discovery (Modules 4 & 5)"]
+        KG["Dynamic Financial Knowledge Graph<br/>(NetworkX Snapshots + PyG Embeddings)"]
+        CD["Causal DAG Discovery<br/>(Continuous NOTEARS Optimization)"]
+    end
+
+    subgraph Fusion["4. Graph Transformer & Regime-Conditioned MoE (Modules 6, 7, 8)"]
+        GT["Causal Temporal Graph Transformer<br/>(RACM-GT Attention)"]
+        REG["Market Regime Detector<br/>(Gaussian HMM: Bull, Bear, Volatile, Crisis)"]
+        MOE["Regime-Conditioned Mixture-of-Experts<br/>(Specialist Neural Networks)"]
+    end
+
+    subgraph Predictions["5. Predictions & Uncertainty (Modules 9 & 10)"]
+        RET["Return Regression Head"]
+        DIR["Direction Classification Head (Up/Down/Flat)"]
+        VOL["Volatility Head (Non-Negative Softplus)"]
+        UQ["Conformal Uncertainty Quantification<br/>(Distribution-Free 90% Bounds & Adaptive ACI)"]
+    end
+
+    subgraph Explain["6. Explainability & Risk Analysis (Module 11)"]
+        XAI["SHAP Attributions · Graph Explainer · Counterfactual What-Ifs"]
+    end
+
+    MKT --> TE
+    NEWS --> EE
+    FUND --> FE
+    MACRO --> ME
+
+    EE --> KG
+    TE & FE & ME --> CD
+    CD --> KG
+    KG & TE --> GT
+    MKT & MACRO --> REG
+    GT & REG --> MOE
+    MOE --> RET & DIR & VOL
+    RET & VOL --> UQ
+    MOE & GT --> XAI
+```
+
 ![RACM-Forecast Framework](docs/architecture.png)
 
 ## Modules
