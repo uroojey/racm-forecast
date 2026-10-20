@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering
+\caption{Market regime discovery classification metrics across 4 canonical regimes.}
+\label{tab:regime_confusion}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+\midrule
+Bull (0)        &  92.93\% &  84.20\% &  88.35\% &     671 \\
+Bear (1)        &  78.85\% &  79.47\% &  79.16\% &     380 \\
+High Vol (2)    &  62.02\% &  70.61\% &  66.03\% &     296 \\
+Crisis (3)      &  73.84\% &  83.01\% &  78.15\% &     153 \\
+\midrule
+\textbf{Macro Avg}   &  76.91\% &  79.32\% &  77.93\% &    1500 \\
+\textbf{Overall Acc} & \multicolumn{4}{c}{\textbf{80.20\%} (Cohen's $\kappa$: 0.716)} \\
+\bottomrule
+\end{tabular}
+\end{table}

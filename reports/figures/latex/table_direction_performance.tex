@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\caption{Out-of-sample directional prediction performance across 3 classes (Down, Flat, Up).}
+\label{tab:direction_confusion}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Class} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Support} \\
+\midrule
+Down (0)        &  76.31\% &  71.00\% &  73.56\% &     431 \\
+Flat (1)        &  47.33\% &  62.54\% &  53.88\% &     283 \\
+Up (2)          &  81.88\% &  71.60\% &  76.40\% &     486 \\
+\midrule
+\textbf{Macro Avg}   &  68.51\% &  68.38\% &  67.95\% &    1200 \\
+\textbf{Overall Acc} & \multicolumn{4}{c}{\textbf{69.25\%} (Cohen's $\kappa$: 0.536)} \\
+\bottomrule
+\end{tabular}
+\end{table}
